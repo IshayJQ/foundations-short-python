@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 
-from typing import Tuple
-
-mi_tupla = (1, 2, 3, 'a', 'b','c','d',8)
+mi_tupla = (1, 2, 3, 'a', 'b','c','d','e')
 primer_elemento = mi_tupla[0]  # Acceder al primer elemento
 ultimo_elemento = mi_tupla[-1]  # Acceder al último elemento
-print(f"{mi_tupla[0]}, {mi_tupla[-1]}, {mi_tupla[1]}, {mi_tupla[-2]}, {mi_tupla[2]}, {mi_tupla[-3]}, {mi_tupla[3]}, {mi_tupla[-4]}")
 
-#mi_tupla, primer_elemento, ultimo_elemento
+for i in range(len(mi_tupla)):
+    if i == 0:
+      print(mi_tupla[i])
+    else:
+      print(mi_tupla[i*-1], end="")
+      #print(end="")
+      print(mi_tupla[i], end="")
+      #print(end="")
