@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 
-mi_tupla = (1, 2, 3, 'a', 'b','c','d','e')
-primer_elemento = mi_tupla[0]  # Acceder al primer elemento
-ultimo_elemento = mi_tupla[-1]  # Acceder al último elemento
-
-for i in range(len(mi_tupla)):
-    if i == 0:
-      print(mi_tupla[i])
-    else:
-      print(mi_tupla[i*-1], end="")
-      #print(end="")
-      print(mi_tupla[i], end="")
-      #print(end="")
+mi_tupla = (1, 2, 3, 4, 'a', 'b', 'c', 'd')
+length = len(mi_tupla)
+first = 0
+last = length-1
+leap = 0
+while length > 0:
+    if leap == 0:
+        print(mi_tupla[first], end="")
+        first += 1
+        leap = 1
+    elif leap == 1:
+        print(mi_tupla[last], end="")
+        last -= 1
+        leap = 0
+    length -= 1
