@@ -10,6 +10,8 @@ tupla_instancia:Tuple[float] = tuple()
 tupla_instancia = 6.8, 9.12, 3.14
 tupla_de_un_elemento:Tuple[str] = ('z',)  # Importante agregar una coma para crear una tupla de un elemento
 
-number:int
-newTuple:Tuple[int] = tuple(number for number in range(5))
-print(newTuple)
+new_tuple:Tuple[str] = ()
+i:str
+for i in tupla_vacia:
+    new_tuple = new_tuple + (i, )
+print(new_tuple)
