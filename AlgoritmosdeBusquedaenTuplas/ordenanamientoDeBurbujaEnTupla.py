@@ -1,26 +1,32 @@
-from typing import Tuple, Union
+#!/usr/bin/python3
+
+rom typing import Tuple, Union
 
 def ordenamiento_burbuja(tupla: Tuple[Union[str, int]]) -> Tuple[Union[str, int]]:
-    print('tupla:',tupla)
     n = len(tupla)
     tupla_ordenada = tuple(tupla)
 
     for i in range(n):
-        print(f'1er FOR iteracion i:{i}')
-        for j in range(0, n-1-i):
-            print(f"2do FOR iteracion{j} -> (j:{j},{n-i-1})")
+        for j in range(0, n-i-1):
             if tupla_ordenada[j] > tupla_ordenada[j+1]:
-                print('j:',j)
                 print('Primera',tupla_ordenada[:j])
-                print('Segunda',tupla_ordenada[j+1], tupla_ordenada[j])
-                print('Tercera',tupla_ordenada[j+2:])
                 tupla_ordenada = tupla_ordenada[:j] + (tupla_ordenada[j+1], tupla_ordenada[j]) + tupla_ordenada[j+2:]
-                print('tupla Ordenada', tupla_ordenada)
-                
+
     return tupla_ordenada
 
 
-datos: Tuple[int] = (1, 5, 8, 3, 2)
+datos: Tuple[int] = (5, 1, 8, 3, 2)
 datos_ordenados: Tuple[int] = ordenamiento_burbuja(datos)
 
 print(f"Tupla ordenada: {datos_ordenados}")
+# Salida esperada: "Tupla ordenada: (1, 2, 3, 5, 8)"
+
+"""
+def ordenamiento_burbuja(tupla: Tuple[Union[str, int]]) -> Tuple[Union[str, int]]:
+    length = len(tupla)
+    mayor = tupla[0]
+    sortTuple = tupla
+    for index1 in range(length):
+        for index2 in range(index1,length):
+            if sortTuple[index2] < tupla[index2+1]:
+"""
