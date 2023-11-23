@@ -11,12 +11,11 @@ def potencia(x: float, n: int) -> float:
     Returns:
         float: El resultado de x elevado a la n.
     """
-		if n == 0:
-			return 1
-		if n == 1:
-			return x
 
-# Caso de prueba 1: x^0
+		if n == 0:
+      return 1
+    return x * potencia(x,n-1)
+
 base: float = 5.0
 exponente: int = 0
 resultado: float = potencia(base, exponente)
